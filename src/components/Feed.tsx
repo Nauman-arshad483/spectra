@@ -29,15 +29,21 @@ export const Feed = () => {
     {
       !isLoading && setFetchedData(data?.slice(0, 18));
     }
+    // eslint-disable-next-line no-console
+    console.log(data,"data is");
+    
   }, [data, isLoading]);
   const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
     ...theme.typography.body2,
     padding: theme.spacing(0),
     maxWidth: "1345px",
-    textAlign: "center",
     color: theme.palette.text.secondary,
     display: "flex",
+    flex:1,
+    background:"orange",
+  
+
   }));
   return (
     <div>
@@ -45,7 +51,7 @@ export const Feed = () => {
         container
         rowSpacing={2}
         columnSpacing={{ xs: 1, sm: 2, lg: 3, xl: 3 }}
-        sx={{ maxWidth: "1345px" }}
+        sx={{ maxWidth: "auto", display:"flex", justifyContent:"center", margin:"auto" }}
       >
         {!isLoading &&
           fetchedData &&
@@ -57,8 +63,8 @@ export const Feed = () => {
                 columnSpacing={{ lg: 0 }}
                 sx={{
                   display: "flex",
-                  justifyContent: "center",
-                  maxWidth: "1345px",
+                  maxWidth: "1370px",
+                  
                 }}
               >
                 <Item>
