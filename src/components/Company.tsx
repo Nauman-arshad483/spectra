@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 export const CompanyCard = (cardData: any) => {
   useEffect(() => {
     // eslint-disable-next-line no-console
-    console.log(cardData);
+    // console.log(cardData);
   }, [cardData]);
 
   return (
@@ -15,7 +15,9 @@ export const CompanyCard = (cardData: any) => {
         display: "flex",
         flexDirection: "column",
         backgroundColor: "#a1b8c4",
-        m: ".5vmax",
+        margin:"auto",
+        flex:1,
+        textAlign:"start"
       }}
     >
       <CardMedia
@@ -41,7 +43,8 @@ export const CompanyCard = (cardData: any) => {
           across all continents except Antarctica
         </Typography>
       </CardContent>
-      <CardActions sx={{ display: "flex", flexDirection: "column" }}>
+      <CardActions sx={{ display: "flex", flexDirection: "column", alignItems:"flex-start"}} >
+        
         <Button size="small">Share</Button>
         <Button size="small">Learn More</Button>
       </CardActions>

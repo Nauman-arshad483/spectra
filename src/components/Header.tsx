@@ -4,7 +4,7 @@ import React from "react";
 
 export const Header = () => {
   return (
-    <Box
+    <Box 
       sx={{
         display: "flex",
         alignItems: "center",
